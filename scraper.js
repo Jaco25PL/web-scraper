@@ -14,7 +14,7 @@ axios(url)
         const $ = cheerio.load(html)
         const articles = []  // <- here we're gonna save the scraped data
 
-        $('.dcr-11dhrb2' , html).each( function() {
+        $('.dcr-11dhrb2' , html).each( function() { // -> get the elements by class name
             const title = $(this).text()
             const url = $(this).find('a').attr('href') // get the tag 'a' and the attribute 'href' (the link)
             articles.push({
